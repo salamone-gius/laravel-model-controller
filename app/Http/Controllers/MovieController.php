@@ -15,6 +15,6 @@ class MovieController extends Controller
     public function index() {
         // inserisco le query per richiedere al db i dati che voglio prendere (in mysql: SELECT * FROM movies)
         $movies = Movie::all();
-        dd($movies);
+        return view('home', compact('movies'));
     }
 }

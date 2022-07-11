@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 // rendo disponibile il db già alla home inserendo il controller relativo come secondo parametro nella Rotta Parametrica
-Route::get('/', 'MovieController@index');
+Route::get('/', 'MovieController@index')->name('home');
