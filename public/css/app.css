@@ -5,3 +5,18 @@
   border: 1px solid red;
 }
 
+h1 {
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 75rem;
+  margin: 2rem auto;
+}
+
+.container li {
+  list-style: none;
+}
+
