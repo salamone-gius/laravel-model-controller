@@ -15,7 +15,18 @@ class MovieController extends Controller
     public function index() {
         // inserisco le query per richiedere al db i dati che voglio prendere (in mysql: SELECT * FROM movies)
         $movies = Movie::all();
-        
+
         return view('home', compact('movies'));
+
+    }
+
+    public function show($id) {
+
+        // nel metodo public 'show' filtro (where) i dati del db in modo che mi retituisca il sinolo film
+        // in mysql: SELECT * FROM movies WHERE id = $id
+        // $movie = MOVIE::where('id', $id)->first();
+        $movie = Movie::find($id);
+
+        return view('show', compact('movie'));
     }
 }

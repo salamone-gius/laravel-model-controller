@@ -3,7 +3,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px solid red;
 }
 
 h1 {
@@ -18,5 +17,29 @@ h1 {
 
     li {
         list-style: none;
+        margin: 2rem 0;
+        
+        a {
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                color: coral;
+            }
+        }
+    }
+
+    &.details {
+        margin-top: 5rem;
+
+        h2, h3 {
+            color: gray;
+            margin: 1.5rem 0;
+            text-align: center;
+
+            span {
+                color: black;
+            }
+        }
     }
 }

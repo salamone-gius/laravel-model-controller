@@ -11,23 +11,11 @@
         <h1>Movies DB</h1>
         <div class="container">
             <ul>
-                @foreach ($movies as $movie)
+                @foreach ($movies as $index => $movie)
                     <li>
-                        <h2>Title:
-                            <span>{{$movie->title}}</span>
-                        </h2>
-                        <h3>Original title:
-                            <span>{{$movie->original_title}}</span>
-                        </h3>
-                        <h3>Nationality:
-                            <span>{{$movie->nationality}}</span>
-                        </h3>
-                        <h3>Date:
-                            <span>{{$movie->date}}</span>
-                        </h3>
-                        <h3>Vote:
-                            <span>{{$movie->vote}}</span>
-                        </h3>
+                        <a href="{{route('show', ['id' => $index])}}">
+                            <h2>{{$movie->id}} - {{$movie->title}}</h2>
+                        </a>
                     </li>
                 @endforeach
             </ul>

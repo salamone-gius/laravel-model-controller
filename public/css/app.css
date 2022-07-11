@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid red;
 }
 
 h1 {
@@ -18,5 +17,31 @@ h1 {
 
 .container li {
   list-style: none;
+  margin: 2rem 0;
+}
+
+.container li a {
+  text-decoration: none;
+  color: black;
+}
+
+.container li a:hover {
+  color: coral;
+}
+
+.container.details {
+  margin-top: 5rem;
+}
+
+.container.details h2,
+.container.details h3 {
+  color: gray;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.container.details h2 span,
+.container.details h3 span {
+  color: black;
 }
 
