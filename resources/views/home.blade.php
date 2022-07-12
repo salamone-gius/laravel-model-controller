@@ -11,10 +11,11 @@
         <h1>Movies DB</h1>
         <div class="container">
             <ul>
-                @foreach ($movies as $index => $movie)
+                @foreach ($movies as $movie)
                     <li>
-                        <a href="{{route('show', ['id' => $index])}}">
-                            <h2>{{$movie->id}} - {{$movie->title}}</h2>
+                        <a href="{{route('movie-details', $movie->id)}}">
+                            {{-- due sintassi diverse per prendere la proprietà dall'array --}}
+                            <h2>{{$movie->id}} - {{$movie['title']}}</h2>
                         </a>
                     </li>
                 @endforeach
